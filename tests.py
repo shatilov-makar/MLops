@@ -5,7 +5,7 @@ import pickle
 from sklearn.metrics import accuracy_score
 
 
-@pytest.mark.parametrize("model_path",['data/Gradient Boosting.sav','data/Naive Bayes.sav','data/Random Forest.sav'])
+@pytest.mark.parametrize("model_path",['data/SVM.sav','data/Naive Bayes.sav','data/Random Forest.sav'])
 @pytest.mark.parametrize("dataset", ['data/test_dataset.csv'])
 def test_model(model_path, dataset):
     model = pickle.load(open(model_path, 'rb'))
