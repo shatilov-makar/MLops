@@ -9,7 +9,7 @@ def get_tokenizer():
     
 @st.cache_data
 def get_models():
-    with open('data/Gradient Boosting.sav', 'rb') as boosting, \
+    with open('data/SVM.sav', 'rb') as boosting, \
       open('data/Naive Bayes.sav', 'rb') as bayes, \
       open('data/Random Forest.sav', 'rb') as forest:
         
@@ -30,7 +30,7 @@ def predict(model, text):
 
 st.title('Определение тональности отзыва')
 
-tab1, tab2, tab3 = st.tabs(["Бустинг","Случайный лес" ,"Вероятностная модель"])
+tab1, tab2, tab3 = st.tabs(["Метод опорных векторов","Случайный лес" ,"Вероятностная модель"])
 
 
 with tab1:
